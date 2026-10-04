@@ -1,0 +1,122 @@
+/* capitaine.ai — grand naval: teak black-brown, brass gold, tabular numerals. */
+.le-root {
+  --le-bg: #14100b;
+  --le-ink: #efe7d3;
+  --le-muted: #a2936f;
+  --le-accent: #c9a227;
+  --le-card: #1d1710;
+  --le-line: #3a2f1d;
+  --le-go: #8fd694;
+  --le-hold: #e8c96a;
+  --le-nogo: #e88a7a;
+  --le-font: "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --le-mono: "SF Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+
+.le-wordmark {
+  font-weight: 800;
+  letter-spacing: .24em;
+  text-transform: uppercase;
+  font-size: 1.05rem;
+  color: var(--le-accent);
+}
+.le-tagline {
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  font-size: .72rem;
+  color: var(--le-muted);
+}
+.le-label {
+  text-transform: uppercase;
+  letter-spacing: .26em;
+  font-size: .68rem;
+  color: var(--le-muted);
+  font-weight: 700;
+}
+.le-verdict-value {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: .08em;
+  font-weight: 800;
+}
+.le-btn {
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  background: var(--le-accent);
+  border-color: var(--le-accent);
+  color: #14100b;
+  font-variant-numeric: tabular-nums;
+}
+.le-card, .sk-fleet {
+  border: 1px solid var(--le-line);
+  border-radius: .5rem;
+  background: linear-gradient(180deg, #1f1810 0%, #191309 100%);
+  box-shadow: inset 0 1px 0 rgba(201, 162, 39, .12), 0 14px 40px rgba(0, 0, 0, .5);
+}
+/* brass rule above the verdict */
+.le-verdict-panel {
+  border-top: 2px solid var(--le-accent);
+}
+
+/* fleet board — the spreadsheet becoming a simulator */
+.sk-fleet {
+  padding: 1.2rem 1.4rem;
+  margin-top: 1.5rem;
+}
+.sk-fleet-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: .8rem 0 1rem;
+  font-size: .92rem;
+  font-variant-numeric: tabular-nums;
+}
+.sk-fleet-table th {
+  text-align: left;
+  font-size: .68rem;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  color: var(--le-muted);
+  padding: .45rem .5rem;
+  border-bottom: 2px solid var(--le-accent);
+}
+.sk-fleet-table td {
+  padding: .6rem .5rem;
+  border-bottom: 1px solid var(--le-line);
+}
+.sk-fleet-table tr:last-child td { border-bottom: 0; }
+.sk-agent { font-family: var(--le-mono); font-size: .88rem; color: var(--le-accent); }
+.sk-debts { text-align: right; font-weight: 700; }
+
+.sk-pill {
+  display: inline-block;
+  padding: .22rem .7rem;
+  border-radius: 999px;
+  font-size: .7rem;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  border: 1px solid currentColor;
+}
+.sk-underway { color: #8fd694; animation: sk-pulse 2.2s ease-in-out infinite; }
+.sk-watching { color: #e8c96a; animation: sk-pulse 3.4s ease-in-out infinite; }
+.sk-standby  { color: #9aa0a8; }
+@keyframes sk-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 currentColor; opacity: 1; }
+  50%      { box-shadow: 0 0 12px 1px currentColor; opacity: .82; }
+}
+
+.sk-fleet-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.sk-readiness {
+  font-variant-numeric: tabular-nums;
+  color: var(--le-muted);
+  font-size: .9rem;
+}
+.sk-readiness b { color: var(--le-ink); }
+
+.le-banner { background: #0b0805; border-bottom: 2px solid var(--le-accent); }
